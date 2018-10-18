@@ -1,0 +1,99 @@
+body {
+  font-size: 24px;
+  line-height: 1.5em;
+}
+
+h1 {
+  font-size: 48px;
+  font-family: "Segoe UI", Times, Arial, Tahoma, Verdana, sans-serif;
+}
+
+.highlight {
+  font-size: 75px;
+}
+
+.multiline {
+  background: rgba(125,48,255,0.5);
+  color: #33ff88;
+  border-bottom: 3px dashed black;
+}
+
+#myID {
+  border: 6px solid orange;
+}
+
+.meinrechteck{
+  width: 300px;
+  height: 150px;
+  background: purple;
+
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+.meinrechteck:after {
+  content: 'huhu! \003E';
+  display: block;
+  color: white;
+  padding: 20px;
+  font-size: Calibri; Arial;
+}
+
+.zweitesrechteck {
+  width: 100px;
+  height: 50px;
+
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  padding: 20px;
+  background: blue;
+  border: 10px solid black;
+  font-size: Calibri; Arial;
+}
+
+.zweitesrechteck:after {
+   content: 'jipie';
+   display: block;
+   color: white;
+   direction: rtl;
+   margin-top: 35px;
+   font-style: italic;
+   text-align: center;
+}
+
+.zweitesrechteck2 {
+  width: 30px;
+  height: 20px;
+  margin: 15px;
+  margin-right: 5.5px;
+
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  padding: 20px;
+  background:#FF1550;
+}
+
+ul.horizontal {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+}
+
+ul.horizontal li {
+  display: inline-block;
+  background: rgba(180,50,10,0.5)
+}
+
+ul.horizontal > li {
+
+}
+
+.copyright {
+  font-size: 15px;
+  font-family: Verdana;
+  color: green;
+}
