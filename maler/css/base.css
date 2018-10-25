@@ -1,11 +1,16 @@
 :root {
   --screen-max: 1200px;
-  --base-font: 'Montserrat', sans-serif;
+  --base-font: 'Montserrat', Tahoma, sans-serif;
   --footer-font: 'Pridi', 'Times New Roman', sans-serif;
 
   --grey-dark: #525252;
   --grey-light: #fefefe;
   --grey: #696969;
+
+  --screen-sm: 576px;
+  --screen-md: 768px;
+  --screen-lg: 992px;
+  --screen-xl: 1200px;
 
 }
 
@@ -58,6 +63,7 @@ body {
   min-height: 100vh;
 }
 
+
 html * {
   box-sizing: border-box;
 }
@@ -105,19 +111,20 @@ footer {
 }
 
 footer .footer-top {
-  display: flex;
+  /*display: flex; --> alles auskommentiert,
+  da es eine mobile Variante sein soll.*/
 }
 
 footer .footer-left {
     flex: 1;
     text-transform: uppercase;
-    text-align: left;
 }
 
 footer .footer-right  {
   flex: 1;
   text-transform: uppercase;
-  text-align: right;
+  /*text-align: right; --> alles auskommentiert,
+  da es eine mobile Variante sein soll.*/
 }
 
 footer ul {
@@ -131,24 +138,65 @@ footer a {
   text-decoration: none;
 }
 
-/*
-footer li {
-  list-style: none;
-}*/
-
 footer .footer-bottom {
-  display: flex;
-/*opacity: 0.1; --> Transparent */
+  /*display: flex; --> alles auskommentiert,
+  da es eine mobile Variante sein soll.*/
+  opacity: 0.5;
 }
 
 footer .footer-bottom-left {
   color: var(--grey);
-  text-align: left;
-  flex: 1;
+  /* flex: 1; --> alles auskommentiert,
+  da es eine mobile Variante sein soll.*/
 }
 
 footer .footer-bottom-right {
   color: var(--grey);
-  text-align: right;
-  flex: 1;
+  /*text-align: right;
+  flex: 1; --> alles auskommentiert,
+  da es eine mobile Variante sein soll.*/
+}
+
+@media screen and (min-width: 480px) {
+
+}
+
+@media screen and (min-width: 576px) {
+  footer .footer-top{
+    display: flex;
+      }
+  footer .footer-left,
+  footer .footer-right {
+    flex: 1;
+  }
+
+  footer .footer-right {
+    text-align: right;
+  }
+
+  footer .footer-bottom {
+    display: flex;
+  }
+
+  footer .footer-bottom-left,
+  footer .footer-bottom-right {
+    flex: 1;
+  }
+
+  footer .footer-bottom-right {
+    text-align: right;
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+
+}
+
+@media screen and (min-width: 992px) {
+
+}
+
+@media screen and (min-width: 1200px) {
+
 }
