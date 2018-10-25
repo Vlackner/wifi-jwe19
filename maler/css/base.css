@@ -1,6 +1,12 @@
 :root {
   --screen-max: 1200px;
   --base-font: 'Montserrat', sans-serif;
+  --footer-font: 'Pridi', 'Times New Roman', sans-serif;
+
+  --grey-dark: #525252;
+  --grey-light: #fefefe;
+  --grey: #696969;
+
 }
 
 @font-face {
@@ -21,6 +27,24 @@
   font-weight: lighter;
 }
 
+@font-face {
+  font-family: 'Pridi';
+  src: url(../fonts/Pridi-Regular.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Pridi';
+  src: url(../fonts/Pridi-Bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Pridi';
+  src: url(../fonts/Pridi-Light.ttf);
+  font-weight: lighter;
+}
+
 html, body {
   margin: 0;
 }
@@ -28,6 +52,10 @@ html, body {
 body {
   font-family: var(--base-font);
   font-size: 100%;
+  background: yellow;
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
 }
 
 html * {
@@ -50,24 +78,77 @@ header img {
   display: block;
 }
 
-header .inner-wrapper {
+
+header .inner-wrapper,
+footer .inner-wrapper {
   position: relative;
   max-width: var(--screen-max);
   margin: 0 auto;
-  background: red;
 }
 
 header h1 {
   position: absolute;
   left: 0;
   bottom: 0;
-  background: green;
 }
 
 main {
   background: lightgrey;
+  flex: 1;
 }
 
+
 footer {
-  background: #333;
+  background: var(--grey-dark);
+  font-family: var(--footer-font);
+  padding: 5%;
+}
+
+footer .footer-top {
+  display: flex;
+}
+
+footer .footer-left {
+    flex: 1;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+footer .footer-right  {
+  flex: 1;
+  text-transform: uppercase;
+  text-align: right;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer a {
+  color: var(--grey-light);
+  text-decoration: none;
+}
+
+/*
+footer li {
+  list-style: none;
+}*/
+
+footer .footer-bottom {
+  display: flex;
+/*opacity: 0.1; --> Transparent */
+}
+
+footer .footer-bottom-left {
+  color: var(--grey);
+  text-align: left;
+  flex: 1;
+}
+
+footer .footer-bottom-right {
+  color: var(--grey);
+  text-align: right;
+  flex: 1;
 }
