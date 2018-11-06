@@ -1,0 +1,38 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: lightblue;
+  flex-flow: column;
+}
+
+div.around {
+  background: orange;
+}
+
+a#boxModelLink,
+a#boxModelLink2 {
+  display: block;
+  width: 300px;
+  height: 300px;
+  box-sizing: content-box;
+  background: green;
+  border: 25px solid tan;
+  padding: 10px;
+  margin: 40px;
+  box-shadow: 0 0 0px 5px #c93030;
+}
+
+a:focus {
+  outline: 5px solid rgba(27, 152, 161, 0.5);
+}
+
+div.around.boader a {
+  box-sizing: border-box !important;
+}
