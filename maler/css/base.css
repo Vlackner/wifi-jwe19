@@ -161,6 +161,7 @@ footer {
   background: var(--grey-dark);
   font-family: var(--footer-font);
   padding: 5%;
+  margin-top:  2.5rem;
 }
 
 footer .footer-top {
@@ -266,5 +267,11 @@ footer .footer-bottom-right {
     flex: 1;
     padding-left: var(--main-padding);
     padding-right: var(--main-padding);
+  }
+
+  footer .footer-bottom {
+    padding-left: var(--main-padding);
+    padding-right: var(--main-padding);
+    margin: 0 auto;
   }
 }
