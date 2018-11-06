@@ -12,6 +12,8 @@
   --screen-lg: 992px;
   --screen-xl: 1200px;
 
+  --main-padding: 1rem;
+
 }
 
 @font-face {
@@ -68,7 +70,6 @@ html * {
 }
 
 #logo {
-  position: fixed;
   z-index: 100;
   top: 0;
   left: 5em;
@@ -91,7 +92,6 @@ html * {
   z-index: 100;
   top: 0;
   left: 10em;
-  width: 10em;
   height: 5em;
 }
 
@@ -149,6 +149,8 @@ header#main-header h1 {
   text-transform: uppercase;
   font-family: var(--base-font);
   color: #FFF;
+  font-size: 9vw;
+  line-height: 1.2em;
 }
 
 main {
@@ -213,12 +215,18 @@ footer .footer-bottom-right {
 }
 
 @media screen and (min-width: 576px) {
+
+  header#main-header h1{
+    font-size: 3.5em;
+  }
+
   footer .footer-top{
     display: flex;
       }
   footer .footer-left,
   footer .footer-right {
     flex: 1;
+    padding: var(--main-padding);
   }
 
   footer .footer-right {
@@ -245,9 +253,18 @@ footer .footer-bottom-right {
 }
 
 @media screen and (min-width: 992px) {
-
+  #logo {
+    position: fixed;
+  }
+  #logo-part-2 {
+    position: absolute;
 }
 
-@media screen and (min-width: 1200px) {
-
+@media screen and (max-width: 1250px) {
+  footer .footer-left,
+  footer .footer-right {
+    flex: 1;
+    padding-left: var(--main-padding);
+    padding-right: var(--main-padding);
+  }
 }

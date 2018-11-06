@@ -30,14 +30,9 @@ section .content-element {
   margin: 1em 0;
 }
 
-.content-element img {
-  position: relative;
-}
-
 .content-element .teaser1 p {
   text-align: center;
 }
-
 
 .content-element a.button {
   display: inline-block;
@@ -52,11 +47,6 @@ section .content-element {
 }
 
 @media screen and (min-width: 576px) {
-
-  .content-element h2.inner-wrapper {
-    font-size: 3.5rem;
-  }
-
   .content-element .teaser p,
   .content-element .content-text {
     padding-right: 65%;
@@ -68,15 +58,3 @@ section .content-element {
       min-height: none;
       max-height: 40rem;
     }
-
-@media screen and (max-width: 1250px){
-
-  header#main-header h1,
-  .content-element > header,
-  .content-element .teaser .inner-wrapper,
-  .content-element .content-text {
-    padding-left: var(--main-padding);
-    padding-right: var(--main-padding);
-  }
-
-}
