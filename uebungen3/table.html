@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <link rel="stylesheet" href="css/table.css">
+  </head>
+  <body>
+    <table width="500" border="1">
+      <caption>Hallo du Tabelle!</caption>
+      <thead>
+        <th width="300"> <!-- wenn nicht dabei steht ist es Pixel -->
+          Stk.
+        </th>
+        <th width="500">
+          Ware
+        </th>
+        <th width="300">
+          Preis
+        </th>
+      </thead>
+      <tbody>
+        <tr> <!-- Zeile 1 -->
+          <td>25</td>
+          <td>Kartoffeln</td>
+          <td>€ 3,5</td>
+        </tr>
+        <tr> <!-- Zeile 2 -->
+          <td rowspan="2">17</td> <!-- unmittelbar in der nächsten Zeile kann weggelassen werden-->
+          <td>Karotten</td>
+          <td>€ 3,5</td>
+        </tr>
+        <tr> <!-- Zeile 3 -->
+          <td>Zucchini</td>
+          <td>€ 3,5</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3">Fußzeile</td>
+          </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

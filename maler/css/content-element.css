@@ -3,17 +3,17 @@ section .content-element {
   position: relative;
 }
 
+.content-element h2.content-header {
+  font-family: 'Pridi', sans-serif;
+  font-size: 9.5vw;
+  line-height: 1.2em;
+  font-weight: lighter;
+  text-transform: uppercase;
+  word-break: break-word;
+}
+
 .content-element .teaser {
   position: relative;
-
-  background:
-  -webkit-linear-gradient(rgba(255, 125, 0, 0.91), rgba(255,125,0,0.5)),
-  url(../img/example_content_image.jpg);
-
-  background:
-  linear-gradient(rgba(255, 125, 0, 0.91), rgba(255,125,0,0.5)),
-  url(../img/example_content_image.jpg);
-
   background-size: cover;
   min-height: 35vw;
 }
@@ -21,8 +21,20 @@ section .content-element {
 .content-element .teaser p {
   position: relative;
   z-index: 10;
-  color: #FFF;
-  padding-top: 5%;
+}
+
+.content-element img {
+  max-width: 100%;
+
+}
+
+.content-element .teaser img {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center top;
 }
 
 .content-element .content-text img {
@@ -30,14 +42,9 @@ section .content-element {
   margin: 1em 0;
 }
 
-.content-element img {
-  position: relative;
-}
-
 .content-element .teaser1 p {
   text-align: center;
 }
-
 
 .content-element a.button {
   display: inline-block;
@@ -57,9 +64,23 @@ section .content-element {
     font-size: 3.5rem;
   }
 
+  .content-element .teaser {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+    }
+
   .content-element .teaser p,
   .content-element .content-text {
-    padding-right: 65%;
+    padding-right: 45%;
+  }
+
+  .content-element .teaser img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: -1;
   }
 }
 
