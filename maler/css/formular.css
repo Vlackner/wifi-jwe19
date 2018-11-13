@@ -1,0 +1,96 @@
+section.formular {
+  background: var(--grey-dark);
+  padding: 1em 0;
+}
+/*
+form .labels {
+  margin-bottom: 1.5em;
+}
+
+.formular .labels label {
+  display: block;
+  float: left;
+  width: 30%;
+}
+
+.formular .fields input,
+.formula .fields textarea{
+  width: 40%;
+  padding: 0.5em;
+  border: 1px solid silver;
+  resize: none;
+  line-height: 2em;
+  height: 2em;
+}
+
+.formular textarea {
+  height: 10em;
+}
+
+
+.formular .submit input[type=submit] {
+  margin-left: 30%;
+  border: none;
+  background-color: orange;
+  font-size: 2em;
+  font-family: var(--base-font);
+  cursor: pointer;
+  opacity: 0.8;
+  color: white;
+  transition: opacity .3s linear;
+}
+
+.formular .submit input[type=submit]:hover {
+  opacity: 1;
+}
+*/
+
+.formular .labels {
+  display: block;
+  float: left;
+}
+
+.formular .labels1 {
+  color: var(--grey-light);
+}
+
+.formular .fields {
+  display: block;
+  float: right;
+}
+
+.formular .felder{
+  background-color: white;
+  width: 40%;
+  padding: 0.5em;
+  border: 1px solid silver;
+  resize: none;
+  line-height: 2em;
+  height: 2em;
+}
+
+.formular textarea {
+  height: 10em;
+}
+
+.formular input, textarea {
+  color: black;
+  margin-left: 20%;
+}
+
+.formular .submit input[type=submit] {
+  background: orange;
+  color: black;
+  font-weight: bold;
+  padding: 15px;
+  margin-bottom: 1em;
+  width: 50%;
+  cursor: pointer;
+  opacity: 0.8;
+  color: white;
+  transition: opacity .3s linear;
+}
+
+.formular .submit input[type=submit]:hover {
+    opacity: 1;
+}

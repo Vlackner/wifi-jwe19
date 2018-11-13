@@ -3,7 +3,7 @@ html, body {
   padding: 0;
 }
 
-nav {
+.navigation {
   background-color: yellow;
 }
 
@@ -45,4 +45,13 @@ div.navigation>ul>li:hover ol{
   display: block;
   background: white;
   font-family: cursive;
+}
+
+div.navigation ul li ol li ul {
+  display: none;
+}
+
+div.navigation>ul>li>ol>li:hover ul{
+  display: block;
+  padding: 50px;
 }

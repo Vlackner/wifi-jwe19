@@ -135,11 +135,12 @@ header#main-header img {
 }
 
 header#main-header .inner-wrapper,
-.content-element .inner-wrapper,
+section.content-element .inner-wrapper,
+section.formular .inner-wrapper,
 footer .inner-wrapper {
   position: relative;
-  max-width: var(--screen-max);
-  margin: 0 auto;
+max-width: var(--screen-max);
+margin: 0 auto;
 }
 
 header#main-header h1 {

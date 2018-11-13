@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/content-element.css">
+  <link rel="stylesheet" href="css/formular.css">
   <title>Muthwill - Der Malermeister</title>
 </head>
 
@@ -36,7 +37,7 @@
       <header>
         <h2 class="inner-wrapper">Malermeister</h2>
       </header>
-        <div class="teaser" style="
+      <div class="teaser" style="
           background-image:
           -webkit-linear-gradient(rgba(255,125,0,0.5), rgba(255,125,0,0.5)),
           url(img/example_content_image.jpg);
@@ -59,20 +60,20 @@
         </div>
       </div>
       <div class="content-text inner-wrapper">
-          <p>
-            Seit 1999 sind wir Mitglied bei den Klimaschutzbündnisbetrieben
-            <img src="img/klimabuendnis.jpg" alt="klimabuendnis" />
-            Laufende Ausbildung von Lehrlingen und ständige Schulung der
-            Mitarbeiter sind bei uns selbstverständlich.
-            Neben Handel und Verarbeitung von Naturfarben verarbeiten wir
-            hochwertigste Mineralfarben der Firma Keim.
-            Verarbeitet werden vorzugsweise biologische Imprägnierungen, Lasuren,
-            Wachsbalsame, Naturharzlacke, Wandfarben und Kleber mit pflanzlichen
-            Bindemitteln.
-          </p>
-          <a class="button" href="#Malermeister" title="Hier gehts zum
+        <p>
+          Seit 1999 sind wir Mitglied bei den Klimaschutzbündnisbetrieben
+          <img src="img/klimabuendnis.jpg" alt="klimabuendnis" />
+          Laufende Ausbildung von Lehrlingen und ständige Schulung der
+          Mitarbeiter sind bei uns selbstverständlich.
+          Neben Handel und Verarbeitung von Naturfarben verarbeiten wir
+          hochwertigste Mineralfarben der Firma Keim.
+          Verarbeitet werden vorzugsweise biologische Imprägnierungen, Lasuren,
+          Wachsbalsame, Naturharzlacke, Wandfarben und Kleber mit pflanzlichen
+          Bindemitteln.
+        </p>
+        <a class="button" href="#Malermeister" title="Hier gehts zum
             Malermeister" target="_blank">Kontaktieren Sie uns</a>
-        </div>
+      </div>
     </section>
     <br />
     <br />
@@ -93,6 +94,33 @@
         </div>
       </div>
     </section>
+
+    <section class="formular">
+      <form action="super.html" method="post">
+        <div class="inner-wrapper">
+          <div class="labels">
+            <p><label class="labels1" for="firma">Firma:</label></p>
+            <p><label class="labels1" for="name">Name:*</label></p>
+            <p><label class="labels1" for="email">E-Mail:*</label></p>
+            <p><label class="labels1" for="betreff">Betreff:*</label></p>
+            <p><label class="labels1" for="notes">Ihr Anliegen:*</label></p>
+          </div>
+
+          <div class="fields">
+            <p><input class="felder" type="text" name="name" id="name" value="" placeholder="Vorname, Nachname" required></p>
+            <p><input class="felder" type="text" name="firma" id="firma" value="" autocomplete="" placeholder="Malermeister Muthwill"></p>
+            <p><input class="felder" type="email" name="email" id="email" value="" placeholder="maxmustermann@hotmail.com" required></p>
+            <p><input class="felder" type="text" name="betreff" id="betreff" value="" placeholder="Anstrich Fassade" required></p>
+            <p><textarea class="felder" name="notes" rows="8" cols="80" required></textarea></p>
+          </div>
+          <div class="submit">
+            <p><input type="submit" name="button" value="Abschicken"></p>
+          </div>
+        </div>
+      </form>
+
+    </section>
+
   </main>
 
   <footer>

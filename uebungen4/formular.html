@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Formular Test</title>
+</head>
+
+<body>
+  <form method="get" action="formular.html">
+    <p>
+      <label for="female">Frau</label>
+      <!--Titel von einem Feld-->
+      <input type="radio" name="gender" id="female" tabindex="1" value="female">
+      <!--Eingabefeld -->
+
+      <label for="male">Mann</label>
+      <input type="radio" name="gender" id="male" tabindex="1" value="male">
+      <!-- Es ist nur eine Auswahlmöglichkeit zur Verfügung. Macht der Typ -->
+    </p>
+
+
+    <p>
+      <label for="firstname">Vorname</label>
+      <input type="text" name="firstname" id="fristname" tabindex="2"  value="" placeholder="Vorname">
+    </p>
+    <p>
+      <label for="lastname">Nachname</label>
+      <input type="text" name="lastname" id="lastname" tabindex="3" value="" placeholder="Nachname">
+    </p>
+
+    <p>
+      <label for="email">E-Mail-Adresse</label>
+      <input type="email" name="email" id="email" tabindex="4" value="" placeholder="youremail@domain.com">
+    </p>
+
+    <p>
+      <label for="passwordId">Passwort</label>
+      <input type="password" name="passwordId" id="passwordId" tabindex="5" value="">
+    </p>
+
+    <p>
+      <label for="socks">Wie viele paar Socken kannst du gleichzeitig tragen (Einzelsstücke angeben)?</label>
+      <input type="number" name="socks" id="socks" tabindex="6" value="" min="4" max="30" step="2">
+    </p>
+
+    <p>
+      <label for="animalfriend">Welcher Typ Mensch bist du?</label>
+    </p>
+    <p>
+      <select id="animalfriend" name="animalfriend" multiple>
+        <!--multiple brauche ich um eine Auswahl von mehrern Werten zu aktivierne -->
+        <option value="katzilein">Katzenmensch</option> <!-- Value ist der Wert der im Formular übermittelt wird. Ist meistens nicht der Name, da sich dieser ändern kann -->
+        <option value="hundilein">Hundemensch</option>
+        <option value="hamsterlein">Hamstermensch</option>
+        <option value="vogilein">Vogelmensch</option>
+      </select>
+    </p>
+
+    <p>
+      <label for="date">Datum</label>
+      <input type="date" name="date" value="date">
+    </p>
+
+    <p>
+      <label for="nots">Kommentar</label>
+    </p>
+    <p>
+      <textarea name="notes" id="notes" rows="8" cols="80"></textarea>
+    </p>
+
+    <p>
+      <label for="agb">AGB einverstanden!</label>
+      <input type="checkbox" name="agb" value="ok" required>
+    </p>
+
+    <p>
+      <input type="submit" name="submit" id="submit" value="Abschicken">
+      <!-- Prüfung auf Checkboxen reagiert besser
+      <button type="button" name="button">Absenden</button>
+      -->
+      <input type="reset" name="reset" value="Alles weg?">
+    </p>
+
+  </form>
+
+</body>
+
+</html>

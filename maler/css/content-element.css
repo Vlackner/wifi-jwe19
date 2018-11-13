@@ -95,6 +95,7 @@ section .content-element {
   header#main-header h1,
   .content-element > header,
   .content-element .teaser .inner-wrapper,
+  .content-element .teaser1 .inner-wrapper,
   .content-element .content-text {
     padding-left: var(--main-padding);
     padding-right: var(--main-padding);
