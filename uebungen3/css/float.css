@@ -6,8 +6,18 @@
   display: block;
 }
 
-.float-right {
+.float-left .box {
+  float: left;
+  padding: 10px;
+  border: 2px solid green;
+  margin-bottom: 10px;
+}
+
+.float-right .box {
   float: right;
+  padding: 10px;
+  border: 2px solid green;
+  margin-bottom: 10px;
 }
 
 
