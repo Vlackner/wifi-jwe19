@@ -1,0 +1,89 @@
+/* Der Animations code */
+@keyframes moving {
+  /*from {
+    left: 0;
+  }
+
+  to {
+    left: 50%;
+  } --> ist auch eine Variante
+  Man kann die Schritt in Prozent auch angeben
+
+   0 {
+    left: 0;
+  }
+
+  25% {
+    left: 100%; --> das ist nun 100% der Duration also von 2Sekunden
+  }
+
+  100% {
+    left: 50%; /* das ist nun 50% der Duration also von 2Sekunden
+  } */
+
+0% {
+  left: 0;
+  top: 0;
+  transform: translateX(0) translateY(0);
+  }
+
+25% {
+  left: 100%;
+  top: 0;
+  transform: translateX(-100%);
+  /* Das Element liegt nun
+  auf der x-Achse bei -100 damit es nach rechts geschoben wird */
+  }
+
+50% {
+    left: 100%;
+    top: 100%;
+    transform: translateX(-100%) translateY(-100%);
+    /* Das Element liegt nun wieder
+    auf der x-Achse bei -100 damit es nach rechts geschoben wird
+    und in der X-Achste  im Minusbereich, sonst
+    würde es hinaufgeschoben werden */
+  }
+
+75% {
+    left: 0;
+    top: 100%;
+    transform: translateX(0) translateY(-100%);
+    /*Das Element liegt nun wieder
+    auf der x-Achse bei 0 aber in der X-Achste noch im Minusbereich, sonst
+    würde es wieder hinaufgeschoben werden */
+  }
+
+100% {
+    left: 0;
+    top: 0;
+    transform: translateX(0) translateY(0);
+    /* Das Element liegt nun wieder
+    auf der x-Achse und auf der y-Achse wieder am Anfangspunkt*/
+  }
+
+}
+
+/* Das Element in dem die Animation verwendet wird */
+div.crazy {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10%;
+  height: 300px;
+  background-color: rgb(48, 182, 62);
+
+  animation-name: moving;
+  animation-duration: 5s; /* die Dauer der Animation */
+  animation-timing-function: ease-in-out; /*Art der Bewertung.Gleichmäßig usw. */
+  animation-delay: 0s; /*warte bis die Animation beginnt */
+  animation-iteration-count: infinite; /*Ablauffolge bzw. Wiederholung der Animation */
+  animation-direction: alternate;  /* die Bewegung der Animation altimate = hin und her */
+}
+
+.spinner {
+  display: block;
+  width: 200px;
+  height: 200px;
+  border: 10px solid black;
+}
