@@ -136,7 +136,7 @@ header#main-header img {
 
 header#main-header .inner-wrapper,
 section.content-element .inner-wrapper,
-section.formular .inner-wrapper,
+/*section.formular .inner-wrapper, --> Mein Versuch*/
 footer .inner-wrapper {
   position: relative;
 max-width: var(--screen-max);

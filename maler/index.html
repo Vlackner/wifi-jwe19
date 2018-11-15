@@ -94,32 +94,68 @@
         </div>
       </div>
     </section>
+    <section class="content-element form">
+          <div class="inner-wrapper">
+            <form>
+              <div class="input">
+                <label for="first_last_name">Name</label>
+                <input type="text" id="first_last_name" name="first_last_name" />
+              </div>
 
+              <div class="input">
+                <label for="company">Firma</label>
+                <input type="text" name="company" id="company" />
+              </div>
+
+              <div class="input">
+                <label for="email">E-Mail</label>
+                <input type="email" name="email" id="email" />
+              </div>
+
+              <div class="input">
+                <label for="subject">Betreff</label>
+                <input type="text" name="subject" id="subject" />
+              </div>
+
+              <div class="input">
+                <label for="message">Ihr Anliegen: </label>
+                <textarea name="message" id="message"></textarea>
+              </div>
+
+              <div class="submit">
+                <input type="submit" name="submit" id="submit" value="Absenden">
+              </div>
+            </form>
+          </div>
+        </section>
+
+
+    <!-- Mein VERSUCH - nicht gelungen
     <section class="formular">
       <form action="super.html" method="post">
         <div class="inner-wrapper">
           <div class="labels">
-            <p><label class="labels1" for="firma">Firma:</label></p>
-            <p><label class="labels1" for="name">Name:*</label></p>
-            <p><label class="labels1" for="email">E-Mail:*</label></p>
-            <p><label class="labels1" for="betreff">Betreff:*</label></p>
-            <p><label class="labels1" for="notes">Ihr Anliegen:*</label></p>
+            <p><label for="firma">Firma:</label></p>
+            <p><label for="name">Name:*</label></p>
+            <p><label for="email">E-Mail:*</label></p>
+            <p><label for="betreff">Betreff:*</label></p>
+            <p><label for="notes">Ihr Anliegen:*</label></p>
           </div>
 
           <div class="fields">
-            <p><input class="felder" type="text" name="name" id="name" value="" placeholder="Vorname, Nachname" required></p>
-            <p><input class="felder" type="text" name="firma" id="firma" value="" autocomplete="" placeholder="Malermeister Muthwill"></p>
-            <p><input class="felder" type="email" name="email" id="email" value="" placeholder="maxmustermann@hotmail.com" required></p>
-            <p><input class="felder" type="text" name="betreff" id="betreff" value="" placeholder="Anstrich Fassade" required></p>
-            <p><textarea class="felder" name="notes" rows="8" cols="80" required></textarea></p>
+            <p><input type="text" name="name" id="name" value="" placeholder="Vorname, Nachname" required></p>
+            <p><input type="text" name="firma" id="firma" value="" autocomplete="" placeholder="Malermeister Muthwill"></p>
+            <p><input type="email" name="email" id="email" value="" placeholder="maxmustermann@hotmail.com" required></p>
+            <p><input type="text" name="betreff" id="betreff" value="" placeholder="Anstrich Fassade" required></p>
+            <p><textarea name="notes" rows="8" cols="80" required></textarea></p>
           </div>
           <div class="submit">
             <p><input type="submit" name="button" value="Abschicken"></p>
           </div>
         </div>
       </form>
-
     </section>
+  -->
 
   </main>
 
