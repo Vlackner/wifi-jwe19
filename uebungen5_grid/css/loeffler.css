@@ -16,46 +16,149 @@
   font-weight: lighter;
 }
 
+.footer {
+  display: block;
+  overflow: hidden;
+  padding-top: 5px;
+  width: 100%;
+  position: relative;
+  background-color: white;
+}
+
 .grid-container {
+  padding-bottom: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+.left {
+  text-align: center;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.left h5,
+.middle h5 {
+  color: grey;
+  font-weight: lighter;
+  font-size: 1rem;
+}
+
+.left ul {
+    list-style-type: none;
+  }
+
+.left li {
+  padding: 5px;
+
+}
+
+.left li a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 20px;
+  color: black;
+  padding: 5px;
+}
+
+.middle {
+  position: relative;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.middle p {
+  color: grey;
+  font-size: 1rem;
+}
+
+.middle strong {
+  font-weight: bold;
+  color: black;
+}
+
+.middle .kontakt  {
+  margin-top: 10px;
+}
+
+.middle a {
+  color: red;
+  text-decoration: none;
+}
+
+.middle button {
+  margin-top: 30px;
+  border: 2px solid black;
+  background: none;
+  padding: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.right {
+  position: relative;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.right p {
+  margin-top: 50px;
+}
+
+.right .haendler,
+.right .online {
+  text-transform: uppercase;
+  line-height: 1.5rem;
+}
+
+.right a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.right .haendler img{
+  width: 100px;
+  height: 80px;
+  overflow: hidden;
+}
+
+.right .online img {
+  width: 80px;
+  height: 60px;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 1060px) {
+
+  .grid-container {
   display: grid;
   grid-template-columns: 30% 30% 30%;
   padding: 10px;
   grid-column-gap: 20px;
-  padding-bottom: 50px;
-  border-bottom: 1px solid black;
-}
+  text-align: left;
+ }
 
-.left {
-  float: left;
-  border-right: 1px solid black;
-  text-decoration: Bold;
-  display: inline-block;
-  }
+ .left {
+   float: left;
+   border-right: 1px solid black;
+   text-decoration: Bold;
+   display: inline-block;
+   }
 
-.left a {
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
+   .middle {
+     border-right: 1px solid black;
+     text-align: center;
+   }
 
-.left ul {
-  list-style-type: circle;
-}
+  .right {
+   float: right;
+   text-align: center;
+   border-right: 1px solid black;
+ }
 
-.middle {
-  border-right: 1px solid black;
-}
-
-.middle p,
-.middle h5{
-  margin-left: 10px;
-}
-
-.middle .kontakt  {
-  top: 10px;
-}
-
-.right {
-  float: right;
-  text-align: center;
-  border-right: 1px solid black;
 }
