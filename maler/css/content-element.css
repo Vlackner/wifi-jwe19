@@ -3,7 +3,7 @@ section .content-element {
   position: relative;
 }
 
-.content-element h2.content-header {
+.content-element h2 {
   font-family: 'Pridi', sans-serif;
   font-size: 9.5vw;
   line-height: 1.2em;
@@ -18,7 +18,8 @@ section .content-element {
   min-height: 35vw;
 }
 
-.content-element .teaser p {
+.content-element .teaser p,
+.content-element .teaser1 p {
   position: relative;
   z-index: 10;
 }
@@ -28,7 +29,8 @@ section .content-element {
 
 }
 
-.content-element .teaser img {
+.content-element .teaser img,
+.content-element .teaser1 img {
   display: block;
   position: relative;
   width: 100%;
@@ -42,9 +44,6 @@ section .content-element {
   margin: 1em 0;
 }
 
-.content-element .teaser1 p {
-  text-align: center;
-}
 
 .content-element a.button {
   display: inline-block;
