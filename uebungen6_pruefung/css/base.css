@@ -1,0 +1,127 @@
+:root {
+  --base-font: 'Montserrat', Tahoma, sans-serif;
+  --base-font2: 'Open_sans', 'Times New Roman', sans-serif;
+
+  --max-screen-size: 1200px;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(../fonts/Montserrat/Montserrat-Regular.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(../fonts/Montserrat/Montserrat-Light.ttf);
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(../fonts/Montserrat/Montserrat-Bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Open_Sans';
+  src: url(../fonts/Open_sans/OpenSans-Regular.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Open_Sans';
+  src: url(../fonts/Open_sans/OpenSans-Light.ttf);
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: 'Open_Sans';
+  src: url(../fonts/Open_sans/OpenSans-Bold.ttf);
+  font-weight: bold;
+}
+
+html, body {
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+}
+
+html * {
+  box-sizing: border-box;
+}
+
+#logo {
+  position: sticky;
+  z-index: 1;
+  float: left;
+  margin-top: 2%;
+  display: block;
+  overflow: hidden;
+}
+
+.navigation {
+  float: right;
+}
+
+.navigation ul{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  list-style-type: none;
+}
+
+.navigation>ul>li {
+  display: inline-block;
+  position: relative;
+  margin: 0 5px;
+  margin-top: 2rem;
+}
+
+.navigation a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  font-family: var(--base-font2);
+}
+
+.navigation>ul>li:hover a {
+  color: red;
+}
+
+header#main-header {
+  overflow: hidden;
+  height: 400px;
+}
+
+header#main-header img {
+  position: absolute;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+header#main-header p,
+header#main-header h1 {
+  color: white;
+  font-family: var(--base-font2);
+  font-weight: lighter;
+  margin:0;
+  position: relative;
+}
+
+header#main-header h1 {
+  font-size: 40px;
+}
+
+header#main-header.inner-wrapper,
+.content-element.inner-wrapper h2,
+.inner-wrapper {
+  max-width: var(--max-screen-size);
+  margin-left: 15%;
+  margin-right: 15%;
+}

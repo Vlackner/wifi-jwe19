@@ -1,0 +1,18 @@
+section.content-element {
+ position: relative;
+ background-color: green;
+ display: block;
+}
+
+.content-element h2 {
+  text-align: center;
+  text-decoration: uppercase;
+  font-family: var(--base-font2);
+  font-weight: bold;
+  margin: 0;
+}
+
+.content-element p {
+  text-align: center;
+  margin: 0;
+}
