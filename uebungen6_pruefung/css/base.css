@@ -60,7 +60,6 @@ html * {
 
 #logo {
   position: sticky;
-  z-index: 1;
   float: left;
   margin-top: 2%;
   display: block;
@@ -175,8 +174,9 @@ footer .footer-bottom {
   background-color: black;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  margin-left: auto;
-  margin-right: auto;
+  padding-top: 10px;
+  padding-bottom: 40px;
+  width: 100%;
 }
 
 footer .footer-bottom-left {
@@ -184,14 +184,15 @@ footer .footer-bottom-left {
 }
 
 footer .footer-bottom-right {
-  flex: 1;
+  flex: 2;
   text-align: right;
 }
 
-footer .footer-bottom-right ul{
-list-style: none;
-padding: 0;
-margin: 0;
+footer .footer-bottom-right>ul>li {
+  display: inline-block;
+  position: relative;
+  line-height: 10px;
+  margin-left: 10px;
 }
 
 footer .footer-bottom-right a {
