@@ -114,7 +114,8 @@ header#main-header img {
 }
 
 header#main-header .header-text {
-  padding-top: 15%;
+  padding-top: 20%;
+  width: 40%;
 }
 
 header#main-header p,
