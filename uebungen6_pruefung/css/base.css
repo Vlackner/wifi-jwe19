@@ -2,8 +2,9 @@
   --base-font: 'Montserrat', Tahoma, sans-serif;
   --base-font2: 'Open_sans', 'Times New Roman', sans-serif;
 
-  --dark-grey: #525252;
+  --dark-grey: #424242;
   --grey: darkgrey;
+  --light-black: #1C1C1C;
 
   --max-screen-size: 1000px;
 }
@@ -131,6 +132,7 @@ header#main-header h1 {
 
 .inner-wrapper,
 header#main-header .inner-wrapper,
+main#flag .inner-wrapper,
 section.content-element .inner-wrapper{
   max-width: var(--max-screen-size);
   position: relative;
@@ -139,10 +141,10 @@ section.content-element .inner-wrapper{
 
 footer {
   flex: 1;
-  margin-top:  2.5rem;
   background-color: var(--dark-grey);
   font-family: var(--base-font2);
   color: var(--grey);
+  max-width: 100%;
 }
 
 footer .footer-top {
@@ -171,7 +173,7 @@ footer .footer-right a {
 
 footer .footer-bottom {
   display: flex;
-  background-color: black;
+  background-color: var(--light-black);
   margin-top: 2rem;
   margin-bottom: 2rem;
   padding-top: 10px;
@@ -184,7 +186,7 @@ footer .footer-bottom-left {
 }
 
 footer .footer-bottom-right {
-  flex: 2;
+  flex: 1;
   text-align: right;
 }
 
