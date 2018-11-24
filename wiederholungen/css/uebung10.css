@@ -1,0 +1,45 @@
+@keyframes moving {
+  0% {
+    left: 0;
+    top: 0;
+    transform: translateX(0) translateY(0);
+  }
+   25% {
+     top: 0;
+     left: 100%;
+     transform: translateX(-100%) translateY(0);
+   }
+
+   50% {
+     left:100%;
+     top: 100%;
+     transform: translateX(-100%) translateY(-100%);
+   }
+
+  80% {
+    left: 0;
+    top: 100%;
+    transform: translateX(0) translateY(-100%);
+  }
+  100% {
+    left: 0;
+    top: 0;
+    transform: translateX(0) translateY(0);
+  }
+}
+
+.rechteck {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10%;
+  padding: 30px;
+  background-color: rgb(138, 239, 240);
+
+  animation-name: moving;
+  animation-duration: 5s;
+  animation-delay: 0s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
