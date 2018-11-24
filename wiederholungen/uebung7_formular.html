@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formular Test</title>
+  </head>
+  <body>
+    <h1>Formular Test</h1>
+    <form class="formulartest" action="uebung7_formular.html" method="post">
+      <fieldset>
+        <legend>Ihre Persönlichen Daten</legend>
+        <p>
+          <label for="gender">weiblich</label>
+          <input id="female" type="radio" name="gender" value="female">
+
+          <label for="gender">männlich</label>
+          <input id="male" type="radio" name="gender" value="male">
+        </p>
+
+        <p>
+          <label for="vorname">Vorname</label>
+          <input id="vorname" type="text" name="vorname" value="" placeholder="Max">
+        </p>
+        <p>
+          <label for="nachname">Nachname</label>
+          <input id="nachname" type="text" name="" value="" placeholder="Mustermann">
+        </p>
+        <p>
+          <label for="email">E-Mail-Adresse</label>
+          <input id="email" type="email" name="email" value="" placeholder="max.mustermann@hotmail.com">
+        </p>
+
+        <p>
+          <label for="password">Passwort</label>
+          <input id="password" type="password" name="password" value="">
+        </p>
+    </fieldset>
+
+    <p>
+      <label for="auswahl">Welches Tier bevorzugst du?</label>
+    </p>
+    <p>
+      <select class="auswahl" name="auswahl" multiple>
+        <option value="">Hund</option>
+        <option value="">Katze</option>
+        <option value="">Maus</option>
+        <option value="">Hamster</option>
+        <option value="">Schildkröte</option>
+      </select>
+    </p>
+
+   <p>
+    <label for="auswahl">Welches Tier bevorzugst du?</label>
+  </p>
+  <p>
+    <select class="auswahl" name="auswahl" >
+      <option value="">Hund</option>
+      <option value="">Katze</option>
+      <option value="">Maus</option>
+      <option value="">Hamster</option>
+      <option value="">Schildkröte</option>
+    </select>
+  </p>
+
+  <p>
+    <label for="hobbies">Hobbies
+    <input type="search" name="hobbies" value="" list="hobbies">
+    <datalist id="hobbies">
+        <option value="Radfahren">
+        <option value="Schwimmen">
+        <option value="Reiten">
+        <option value="Snowboarden">
+      </datalist>
+      </label>
+  </p>
+
+  <p>
+    <label for="datum">Was für einen Tag haben wir?</label>
+    <input id="date" type="date" name="date">
+  </p>
+
+  <p>
+      <label for="kommentar">Kommentar</label>
+    </p>
+    <p>
+      <textarea id="kommentar" name="kommentar" rows="8" cols="80"></textarea>
+    </p>
+
+    <p>
+    <label for="agb">ABG verstanden?</label>
+    <input id="agb" type="checkbox" name="agb" value="" required>
+    </p>
+
+    <p>
+      <input id="submit" type="submit" name="submit" value="Abschicken">
+      <input id="reset" type="reset" name="reset" value="Alles löschen">
+    </p>
+    </form>
+  </body>
+</html>

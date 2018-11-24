@@ -4,15 +4,15 @@ html, body {
 }
 
 nav {
-  background-color: rgb(64, 92, 83);
+  background-color: rgb(19, 144, 99);
 }
 
 nav.main-navigation ul {
-  margin: 0;
   padding: 0;
-  list-style: none;
+  margin: 0;
   display: block;
-  width: 100%;
+  flex-direction: row;
+  list-style: none;
 }
 
 nav.main-navigation ul::after {
@@ -23,44 +23,36 @@ nav.main-navigation ul::after {
   clear: both;
 }
 
-nav.main-navigation>ul>li {
+nav.main-navigation ul li {
   display: block;
   float: left;
-  margin: 0 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 10px;
+  margin-right: 10px;
   position: relative;
 }
 
 nav.main-navigation ul li a {
+  display: block;
   width: 100%;
   height: auto;
-  padding: 20px;
-  color: white;
-  display: block;
-  /*transition: all 300ms ease;*/
+  padding: 15px;
+  color: black;
 }
 
 nav.main-navigation>ul>li>ul {
   position: absolute;
-  z-index: -1;
   transform: translateY(-100%);
-/*  transform: transform 300ms ease-out;*/
+  z-index: -1;
 }
 
 nav.main-navigation>ul>li:hover ul {
-  display: block;
   transform: translateY(0);
+  display: block;
 }
 
-nav.main-navigation ul li:hover a{
-  background: black;
-  color: rgb(235, 195, 107);
-}
-
-nav.main-navigation ul li ul li {
-  width: 150px;
-}
-
-nav.main-navigation ul li ul li:hover a {
-  background-color: rgb(107, 204, 110);
+nav.main-navigation ul li:hover a {
+  background: rgb(209, 247, 199)
   color: black;
 }
