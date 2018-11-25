@@ -1,0 +1,99 @@
+form {
+  padding: 2rem 0;
+}
+
+section .form-header p {
+  padding: 0;
+  margin: 0;
+}
+
+.maps iframe {
+  width: calc(300px - 4rem);
+  margin-top: 3rem;
+}
+
+
+form .input label {
+  display: block;
+  width: 100%;
+  color: black;
+
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+form .input input {
+  display: block;
+  width: 90%;
+  padding: 6px;
+  margin-bottom: 1rem;
+  font-family: var(--base-font);
+}
+
+form .input textarea {
+  width: 90%;
+  margin-bottom: 1rem;
+  padding: 6px;
+  font-family: var(--base-font);
+}
+
+form .submit {
+  clear: both;
+}
+
+form input[type="submit"] {
+  background-color: white;
+  color: var(--red);
+  font-size: 15px;
+  border: 1px solid var(--grey);
+  border-radius: 2px;
+  padding: 5px 30px;
+  opacity: 0.8;
+  transition: opacity .3s linear;
+}
+
+form input[type="submit"]:hover {
+  background-color: rgb(221, 206, 201);
+  opacity: 1;
+}
+
+
+@media screen and (min-width: 1030px) {
+
+ section {
+   margin: 0;
+ }
+
+ .maps iframe {
+   width: var(--screen-size);
+ }
+
+form .formular-input {
+  width: var(--screen-size);
+}
+
+ form .input {
+    float: left;
+    max-width: var(--screen-size);
+    width: 33.3%;
+  }
+
+  form .input label {
+    width: 100%;
+    text-transform: uppercase;
+  }
+
+  form .input input {
+    width: 100%;
+  }
+
+  form .email {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  form .input textarea {
+    width: var(--screen-size);
+  }
+
+}
