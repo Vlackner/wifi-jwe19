@@ -150,6 +150,15 @@ header#main-header img {
   display: block;
 }
 
+header#main-header .text-header {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  font-family: var(--base-font2);
+  color: white;
+}
+
 
 footer {
   position: relative;
@@ -209,6 +218,10 @@ footer .footer-bottom-right a {
 
   .main-navigation ul li {
     display: inline;
+  }
+
+  header#main-header .text-header {
+    padding-bottom: 15%;
   }
 
   footer {
