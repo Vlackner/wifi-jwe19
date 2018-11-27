@@ -1,0 +1,156 @@
+:root {
+  --max-scren-size: 1000px;
+
+  --base-font: 'Montserrat', Arial sans-serif;
+
+  --green: rgb(79, 171, 222);
+  --light-green:rgba(137, 202, 226, 0.5);
+  --dark-green: rgb(31, 47, 198);
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(../fonts/Montserrat-Regular.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(../fonts/Montserrat-Light.ttf);
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(../fonts/Montserrat-Bold.ttf);
+  font-weight: bold;
+}
+
+html, body {
+  margin: 0;
+}
+
+html * {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 100%;
+  font-family: var(--base-font);
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+  background-color: var(--light-green);
+}
+
+.running {
+  width: 100%;
+  height: 10%;
+}
+
+.running p {
+  width: 100%;
+  margin: 0;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: white;
+  background-color: var(--dark-green);
+}
+
+header#main-header {
+  position: relative;
+  width: 100%;
+  height: 45vw;
+  overflow: hidden;
+}
+
+header#main-header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+header#main-header .header-text {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+header#main-header .header-text p {
+  width: 100%;
+  background-color: rgba(173, 183, 200, 0.5);
+  text-align: right;
+  padding: 0.5rem;
+  color: var(--dark-green);
+}
+
+nav#main-navigation {
+  width: 100%;
+  height: 100%;
+  margin-right: 5px;
+  padding-left: 1em;
+  background-color: var(--green);
+  color: var(--dark-green);
+  padding: 1rem;
+}
+
+nav#main-navigation ul {
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 5%;
+}
+
+nav#main-navigation a {
+  color: var(--dark-green);
+  text-decoration: none;
+}
+
+main .main-text {
+  padding: 1rem;
+}
+
+main .main-text ul,
+main .main-text ol {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+footer p {
+  text-align: right;
+  color: white;
+  background-color: var(--dark-green);
+  margin: 0;
+  padding: 15px;
+}
+
+@media screen and (min-width: 565px) {
+
+
+  .runner p {
+    font-size: 30px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  nav#main-navigation {
+    float: left;
+    width: 30%;
+  }
+
+  main .main-text {
+    float: right;
+    width: calc(70% - 5px);
+  }
+
+
+}
