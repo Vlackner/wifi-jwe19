@@ -106,9 +106,9 @@ section .content-header p {
   align-items: center;
   transition: all 0.3s ease;
 
-
   color: white;
   background-color: rgba(205, 154, 160, 0.8);
+  font-size: 15px;
 }
 
 .grid-item:hover .grid-text{
@@ -146,6 +146,10 @@ section .content-header p {
 
   .grid-image {
     height: 12vw;
+  }
+
+  .grid-item .grid-text {
+    font-size: 20px;
   }
 
 }

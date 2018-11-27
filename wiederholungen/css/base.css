@@ -160,6 +160,23 @@ header#main-header .text-header {
 }
 
 
+.overlay {
+  position: relative;
+  margin-left: 2rem;
+  text-align: center;
+}
+
+.overlay-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.overlay-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 footer {
   position: relative;
   background-color: var(--grey);
@@ -204,6 +221,46 @@ footer .footer-bottom-right a {
   text-decoration: none;
   text-transform: uppercase;
   color: var(--light-grey);
+}
+
+@media screen and (min-width: 668px) {
+
+  header#main-header .text-header {
+    padding-bottom: 15%;
+  }
+
+  .overlay {
+    margin-left: unset;
+  }
+
+  .overlay-box {
+    position: relative;
+    float: right;
+    transform: translateY(-50%);
+    width: 100%;
+    max-width: 569px;
+    height: auto;
+    min-height: 78px;
+    background-image: url(../img/overlay-bg.png);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-size: 100% 100%;
+  }
+
+  .overlay-box img {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateX(40px) translateY(-50%);
+    min-width: 100px;
+  }
+
+  .overlay-box p {
+    padding-left: 35px;
+    margin-right: 35px;
+  }
 }
 
 @media screen and (min-width: 1030px) {
