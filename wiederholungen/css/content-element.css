@@ -85,15 +85,6 @@ section .content-header p {
 
 @media screen and (min-width: 675px) {
 
-  .teaser-wrapper {
-    display: flex;
-    width: 100%;
-  }
-
-  .teaser-wrapper .teaser-image {
-    display: inline-block;
-  }
-
   .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
