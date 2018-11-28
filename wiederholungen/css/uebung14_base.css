@@ -1,0 +1,80 @@
+:root {
+ --max-screen-size: 1000px;
+
+ --dark-grey: rgb(80, 80, 78);
+}
+
+html, body {
+  margin: 0;
+}
+
+html * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial sans-serif;
+  font-size: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+}
+
+#logo {
+  top: 0;
+  left: 5rem;
+  width: 5em;
+  height: 5em;
+}
+
+#logo a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--dark-grey) url(../img/Logo_muthwill.svg) no-repeat;
+  background-size: 80%;
+  text-indent: -9999em;
+  overflow: hidden;
+}
+
+#logo2 {
+  display: block;
+  position: absolute;
+  z-index: 100;
+  width: auto;
+  height: 5rem;
+  left: 5rem;
+  top: 0;
+  background: transparent;
+}
+
+#logo2 a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+  color: var(--dark-grey);
+  font-size: 1.3rem;
+  line-height: 1em;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 680px) {
+
+  #logo {
+    position: fixed;
+    z-index: 100;
+    left: 5rem;
+  }
+
+  #logo2 {
+    width: 10rem;
+    height: 5rem;
+    left: 11em;
+  }
+
+}
