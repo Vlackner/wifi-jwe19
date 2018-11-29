@@ -1,0 +1,59 @@
+section.content-element {
+  display: block;
+  font-family:
+}
+
+section.content-element h1 {
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: .5rem;
+  font-weight: lighter;
+  font-size: 30px;
+  color: var(--grey);
+}
+
+.teaser {
+  margin-left: 1rem;
+  flex: 1;
+  text-align: center;
+}
+
+.teaser img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  display: inline-block;
+}
+
+.teaser-text {
+  text-align: center;
+}
+
+.teaser-text button {
+  padding: 1em;
+  border: 1px solid var(--brown);
+  color: var(--brown);
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 3px;
+  background-color: var(--white);
+}
+
+@media screen and (min-width: 992px) {
+
+  .teaser-wrapper {
+    display: flex;
+    width: 100%;
+  }
+
+  .teaser {
+    flex: 1;
+    margin: 0;
+  }
+
+  .teaser img {
+    width: 90%;
+    height: auto;
+  }
+
+}

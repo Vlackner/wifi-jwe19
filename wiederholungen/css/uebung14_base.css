@@ -1,8 +1,9 @@
 :root {
   --base-font: 'Montserrat', Arial, 'Times New Roman' sans-serif;
 
-  --max-screen-size: 1000px;
+  --max-screen-size: 1100px;
   --grey: rgb(80, 82, 78);
+  --light-grey: rgb(196, 192, 183);
 }
 @font-face {
   font-style: 'Montserrat';
@@ -98,7 +99,7 @@ header#main-header img {
 
 header#main-header h1 {
   position: absolute;
-  left: 5rem;
+  left: 0;
   bottom: 5rem;
   font-size: 4vw;
   text-transform: uppercase;
@@ -107,10 +108,20 @@ header#main-header h1 {
   line-height: 1.2em;
 }
 
-header#main-header .inner-wrapper {
+header#main-header .inner-wrapper,
+section.content-elements .inner-wrapper {
   max-width: var(--max-screen-size);
   position: relative;
   margin: 0 auto;
+}
+
+hr {
+  width: 100%;
+  height: 1em;
+  background-color: rgb(42, 110, 154);
+  margin: 0;
+  border: 0;
+  padding: 0;
 }
 
 @media screen and (min-width: 995px) {
@@ -118,11 +129,11 @@ header#main-header .inner-wrapper {
     position: fixed;
     width: 5em;
     height: 5em;
-    left: 10em;
+    left: 2em;
   }
 
   #logo2 {
-    left: 15em;
+    left: 7em;
     width: 15em;
     height: 5em;
   }
