@@ -36,7 +36,7 @@
 }
 
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 769px) {
   .content-element .team {
     display: flex;
     flex-flow: column;

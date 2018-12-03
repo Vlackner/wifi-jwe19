@@ -169,9 +169,6 @@ header#main-header .text-header {
 .overlay-inner {
   max-width: 960px;
   margin: 0 auto;
-}
-
-.overlay-inner {
   display: flex;
   justify-content: center;
   align-items: center;

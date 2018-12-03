@@ -3,6 +3,7 @@ section.content-element {
   font-family:
 }
 
+
 section.content-element h1,
 section.content-element h2 {
   text-transform: uppercase;
@@ -11,6 +12,11 @@ section.content-element h2 {
   font-weight: lighter;
   font-size: 30px;
   color: var(--grey);
+}
+
+section.content-element p {
+  text-align: center;
+  line-height: 2rem;
 }
 
 .teaser-wrapper {
