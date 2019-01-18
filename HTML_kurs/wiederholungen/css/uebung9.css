@@ -1,0 +1,19 @@
+.grid-container {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: rgb(126, 87, 184);
+  padding: 30px;
+  margin: 10px;
+  grid-gap: 10px;
+}
+
+.grid-item {
+  background-color: rgb(62, 187, 55);
+  border: 2px solid black;
+  padding: 15px;
+}
+
+.grid-item:nth-child(1) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}

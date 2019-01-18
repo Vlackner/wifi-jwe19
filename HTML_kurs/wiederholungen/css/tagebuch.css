@@ -1,0 +1,52 @@
+section .tagebuch h2 {
+  clear: both;
+  color: var(--red);
+}
+
+section .tagebuch-text {
+  margin-right: 4rem;
+  margin-bottom: 2rem;
+}
+
+section .tagebuch-text ul {
+  list-style-type: circle;
+}
+
+section .tagebuch-bild {
+  min-width: 100px;
+  max-width: 300px;
+  margin-top: 2rem;
+  display: block;
+}
+
+section .tagebuch-bild img {
+  width: 100%;
+}
+
+section .tagebuch-bild a {
+  color: var(--red);
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 1030px) {
+
+  section .tagebuch-text {
+    float: left;
+    width: 60%;
+  }
+  section .tagebuch-bild {
+    float: right;
+    width: calc(40% - 4rem);
+  }
+
+  section .tagebuch-bild img {
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+  }
+
+}
