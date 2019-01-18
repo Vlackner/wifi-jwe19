@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/calculator.css">
+    <title>Formular als Taschenrechner</title>
+  </head>
+  <body>
+    <h1>Taschenrechner</h1>
+    <form class="formular" action="formular.html" method="post">
+      <fieldset>
+      <input type="text" class="calc" name="calculation" value="">
+
+      <input type="button" class="number" name="1" value="1">
+      <input type="button" class="number" name="2" value="2">
+      <input type="button" class="number" name="3" value="3">
+      <input type="button" class="addition" name="Plus" value="+">
+
+      <input type="button" class="number" name="4" value="4">
+      <input type="button" class="number" name="5" value="5">
+      <input type="button" class="number" name="6" value="6">
+      <input type="button" class="subtraktion" name="Minus" value="-">
+
+      <input type="button" class="number" name="7" value="7">
+      <input type="button" class="number" name="9" value="8">
+      <input type="button" class="number" name="9" value="9">
+      <input type="button" class="multi" name="Mal" value="x">
+
+      <input type="button" class="empty" name="leer" value=" ">
+      <input type="button" class="number" name="0" value="0">
+      <input type="button" class="dot" name="Punkt" value=".">
+      <input type="button" class="value" name="istgleich" value="=">
+
+    </fieldset>
+    </form>
+
+    <script src="js/vendor/jquery.js"></script>
+    <script type="text/javascript" src="js/calculator.js"></script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+body {
+  text-align: center;
+  margin-top:15%;
+}
+
+button {
+  width: 150px;
+  transition: all 1s ease-out;
+  background-color: darkblue;
+  color: lightcoral;
+  border: 3px solid white;
+  border-radius: 1em;
+  padding: 2em;
+}
+
+/* Man kann über JavaScript eine Class auf das Element setzten */
+button.run {
+  transform: translateY(200px);
+}
+
+button.sending {
+  opacity: .2;
+}

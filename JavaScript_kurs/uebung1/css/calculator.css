@@ -1,0 +1,35 @@
+body {
+  background: #333;
+  color: #FFF;
+  text-align: center;
+}
+
+form.formular {
+  text-align: center;
+  background-color: blue;
+  width: 18em;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+form input {
+  width: 50px;
+  height: 30px;
+}
+
+form .calc {
+  margin-top: 2em;
+  margin-bottom: 1em;
+  height: 20px;
+  width: 18em;
+}
+
+form .number,
+form .addition,
+form .subtraktion,
+form .multi,
+form .empty,
+form .dot,
+form .value {
+  margin: 4px;
+}
