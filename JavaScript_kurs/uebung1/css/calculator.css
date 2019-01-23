@@ -1,20 +1,26 @@
 body {
+  position: relative;
   background: #333;
   color: #FFF;
   text-align: center;
 }
 
 form.formular {
-  text-align: center;
-  background-color: blue;
-  width: 18em;
+  background-color: rgb(209, 212, 77);
+  width: 20em;
+  height: auto;
   display: inline-block;
-  margin-left: 5px;
+  text-align: center;
+  border: 5px solid black;
+  background-image: url(https://m.media-amazon.com/images/S/aplus-media/mg/dbf4301f-af40-46f2-9a87-a99deddcd9a2._SL300__.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 form input {
   width: 50px;
   height: 30px;
+  font-family: 'Times New Roman', Arial  sans-serif;
 }
 
 form .calc {
@@ -22,14 +28,17 @@ form .calc {
   margin-bottom: 1em;
   height: 20px;
   width: 18em;
+  background-color: rgb(162, 226, 147);
+  color: black;
+  border: 0px solid transparent;
 }
 
 form .number,
-form .addition,
-form .subtraktion,
-form .multi,
+form .operator,
 form .empty,
-form .dot,
 form .value {
   margin: 4px;
+  background-color: rgb(162, 226, 147);
+  color: black;
+  border: 0px solid transparent;
 }
