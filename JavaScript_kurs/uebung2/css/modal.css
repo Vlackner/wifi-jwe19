@@ -1,0 +1,10 @@
+.fade-scale {
+  opacity: 0;
+  transform: scale(0);
+  transition: .5s linear;
+}
+
+.fade-scale.show {
+  opacity: 1;
+  transform: scale(1);
+}
