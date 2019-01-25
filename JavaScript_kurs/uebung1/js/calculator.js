@@ -10,7 +10,7 @@ $('input').on('keyup', function () {
     $('.calc').val('');
 });
 
-$('input.number').on('click', function () {
+$('input.number-btn').on('click', function () {
     if($(this).attr('input') != '.operator') {
         $('.calc').val($('.calc').val()+$(this).val());
     }
@@ -22,7 +22,7 @@ $('input.number').on('click', function () {
 });
 
 $('input.operator').on('click', function () {
-    if($(this).attr('input') != '.number') {
+    if($(this).attr('input') != '.number-btn') {
         $('.calc').val($('.calc').val()+$(this).val());
     }
    else {
@@ -39,4 +39,9 @@ $('input.empty').on('click', function () {
 $('input.value').on('click', function () {
   var ergebnis = $('.calc').val();
   $('.calc').val(eval(ergebnis));
+});
+
+$('.back-btn').on('click' , function () {
+  var ergebnis = $('.calc').val();
+  $('.calc').val(ergebnis.substr(0, ergebnis.length-1));
 });
