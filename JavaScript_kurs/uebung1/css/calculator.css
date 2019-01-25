@@ -33,10 +33,11 @@ form .calc {
   border: 0px solid transparent;
 }
 
-form .number,
+form .number-btn,
 form .operator,
 form .empty,
-form .value {
+form .value,
+form .back-btn {
   margin: 4px;
   background-color: rgb(162, 226, 147);
   color: black;

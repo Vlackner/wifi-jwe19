@@ -1,0 +1,62 @@
+
+html * {
+	box-sizing: border-box;
+}
+h1 {
+	text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+
+.screen {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  padding: 1em;
+  text-align: right !important;
+  font-size: 300%;
+  line-height: 1em;
+  font-family: "Courier New", serif;
+  font-weight: bold;
+  background: black !important;
+  color: white;
+}
+
+.button {
+  	padding: 1em 0;
+	background: darkblue;
+    border: none;
+    color: white;
+    font-size: 200%;
+    line-height: 100%;
+	border: 3px inset transparent;
+	cursor: pointer;
+}
+.button:active {
+	background: black;
+	border: 3px inset white;
+}
+
+.btn-equal {
+	grid-row-start: 5;
+	grid-row-end: 7;
+	grid-column-start: 4;
+	grid-column-end: 5;
+
+}
+.btn-zero {
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
