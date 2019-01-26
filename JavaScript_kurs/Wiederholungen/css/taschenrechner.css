@@ -1,0 +1,61 @@
+html * {
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(173, 4, 106);
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+.calculator {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  width: 500px;
+  height: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: rgb(209, 124, 185);
+  border: 3px solid rgb(60, 5, 46);
+  box-shadow: 10px 10px 10px;
+}
+
+.calculation {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  max-width: 100%;
+  height: auto;
+  background-color: rgb(147, 62, 147);
+  color: white;
+  font-size: 30px;
+  border: 2px solid rgb(60, 5, 46);
+  margin-bottom: 1rem;
+}
+
+.button {
+  text-align: center;
+  font-size: 25px;
+  background: rgb(147, 62, 147);
+  color: white;
+  border: 2px solid rgb(60, 5, 46);
+  border-radius: 40%;
+}
+
+.zero-btn {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.enter-btn {
+  grid-row-start: 4;
+  grid-row-end: 7;
+  grid-column-start: 4;
+  grid-column-end: 5;
+}
+
+.dot-btn {
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
