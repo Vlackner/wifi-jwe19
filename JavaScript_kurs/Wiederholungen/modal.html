@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Versuch ein Modal ohne Bootstrap zu erstellen</title>
+  <link rel="stylesheet" href="css/modal.css">
+</head>
+
+<body>
+  <h1>Erster Versuch ein Modal ohne Bootstrap zu erstellen</h1>
+  <input type="button" id="myModalButton" class="modal-button" name="modal" value="Mein Modal">
+
+  <div id="myModal" class="modal">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Stimmen Sie zu oder verlassen Sie die Website!!</h2>
+    </div>
+    <div class="modal-body">
+      <div class="modal-content">
+
+        <form class="modal-formular" action="modal.html" method="post">
+          <fieldset>
+            <legend>Ihre Persönlichen Daten</legend>
+            <div class="ratio">
+              <label for="female">Weiblich</label>
+              <input type="radio" id="female" name="gender" value="female">
+
+              <label for="male">Männlich</label>
+              <input type="radio" id="male" name="gender" value="male">
+            </div>
+
+            <div class="inputfields">
+              <label for="firstname">Vorname</label>
+              <input type="text" id="firstname" name="Vorname" value="" placeholder="Vorname">
+            </div>
+
+            <div class="inputfields">
+              <label for="surname">Nachname</label>
+              <input type="text" id="surname" name="Nachname" value="" placeholder="Nachname">
+            </div>
+
+            <div class="inputfields">
+              <label for="adress">Adresse</label>
+              <input type="text" id="adress" name="Adresse" value="" placeholder="Hinterwinkl 217">
+            </div>
+
+            <div class="inputfields">
+              <label for="email">E-Mail</label>
+              <input type="email" id="email" name="email" placeholder="vlackner@hinterwinkl.at">
+            </div>
+
+            <div class="inputfields">
+              <label for="birthday">Geburtstag</label>
+              <input type="date" id="birthday" name="birthday" value="">
+            </div>
+            
+            <div class="agb">
+              <input type="checkbox" id="AGBs" name="AGBs" value="" required>
+              <label for="AGBs">Ich habe die AGBs und die <a href="#">Datenschutzvereinbarung</a> gelesen.</label>
+
+              <div class="modal-footer">
+                <input type="button" id="close" name="close" value="Schließen">
+                <input type="submit" id="senden" name="senden" value="Senden">
+              </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/modal.js"></script>
+</body>
+
+</html>
