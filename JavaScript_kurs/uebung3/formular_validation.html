@@ -74,76 +74,105 @@
     <div class="criteria" id="capital">Enhält einen Großbuchstaben</div>
     <div class="criteria" id="number">Enthält eine Zahl</div>
     <div class="criteria" id="special">Enthält ein Sonderzeichen</div>
+    <div class="form-group row">
+      <div class="col-sm-10 m-2">
+        <input id="fileupload" type="file" name="files[]" data-url="server/php/" multiple>
+      </div>
+    </div>
   </form>
   <script src='js/vendor/jquery.js'></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
+  <script src="jQuery-File-Upload-9.28.0/js/vendor/jquery.ui.widget.js"></script>
+  <script src="jQuery-File-Upload-9.28.0/js/jquery.iframe-transport.js"></script>
+  <script src="jQuery-File-Upload-9.28.0/js/jquery.fileupload.js"></script>
   <script>
-    $('#btn-submit').click(function() {
+     /* $('#btn-submit').click(function() { */
+    $('.form-control').click(function() {
+
       var firstname = $('#firstname');
       var surname = $('#name');
       var email = $('#email');
       var passwort1 = $('#kb1');
       var passwort2 = $('#kb2');
 
-      if (firstname.val() == "") {
-        firstname.css('border', '2px solid red');
-      } else {
-        firstname.css('border', '2px solid green');
-      }
-      if (surname.val() == "") {
-        surname.css('border', '2px solid red');
-      } else {
-        surname.css('border', '2px solid green');
-      }
-      if (email.val() == "") {
-        email.css('border', '2px solid red');
+      console.log(email.val().match('^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$'));
 
+      if (firstname.val() != '' && firstname.val().match(/[0-9 -()+]+$/) == null) {
+        firstname.css('border', '2px solid green');
       } else {
+        firstname.css('border', '2px solid red');
+        return false;
+      }
+      if (surname.val() != '' && surname.val().match(/[0-9 -()+]+$/) == null) {
+        surname.css('border', '2px solid green');
+      } else {
+        surname.css('border', '2px solid red');
+        return false;
+      }
+      if (email.val() != "" && email.val().match('^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$') == true) {
         email.css('border', '2px solid green');
-      }
-      if (passwort1.val() == "") {
-        passwort1.css('border', '2px solid red');
       } else {
-        passwort1.css('border', '2px solid green');
+        email.css('border', '2px solid red');
+        return false;
       }
-      if (passwort2.val() == "") {
+      if (passwort1.val() != "") {
+        passwort1.css('border', '2px solid green');
+      } else {
+        passwort1.css('border', '2px solid red');
+        return false;
+      }
+      if (passwort2.val() != "") {
+        passwort2.css('border', '2px solid green');
+      } else {
         passwort2.css('border', '2px solid red');
         return false;
-      } else {
-        passwort2.css('border', '2px solid green');
       }
     });
 
 
     $('.kb-password').keyup(function() {
       var input = $(this).val();
+      var checkval = 0;
       if (input.length >= 8) {
         $('#length').addClass('valide');
+        checkval++;
       } else {
         $('#length').removeClass('valide');
       }
       if (input.match(/[A-z]/)) {
         $('#letter').addClass('valide');
+        checkval++;
       } else {
         $('#letter').removeClass('valide');
       }
       if (input.match(/[A-Z]/)) {
         $('#capital').addClass('valide');
+        checkval++;
       } else {
         $('#capital').removeClass('valide');
       }
       if (input.match(/\d/)) {
         $('#number').addClass('valide');
+        checkval++;
       } else {
         $('#number').removeClass('valide');
       }
       if (input.match(/[!@#$%\^&*(){}[\]<>?/|\-+]/)) {
         $('#special').addClass('valide');
+        checkval++;
       } else {
         $('#special').removeClass('valide');
       }
+
+      /* if (checkval == 5) {
+          var passwort = $(this).attr('id') == 'kb1' && $(this).val() === $('#kb2').val();
+          var passwort2 = $(this).attr('id') == 'kb2' && $(this).val() === $('#kb1').val();
+
+          console.log(passwort);
+          console.log(passwort2);
+       } */
 
       /* meine Variante */
       var btnsend = $('#btn-submit');
@@ -155,7 +184,17 @@
       }
 
     });
-    
+
+    $(function() {
+      $('#fileupload').fileupload({
+        dataType: 'json',
+        done: function(e, data) {
+          $.each(data.result.files, function(index, file) {
+            $('<p/>').text(file.name).appendTo(document.body);
+          });
+        }
+      });
+    });
   </script>
 </body>
 
