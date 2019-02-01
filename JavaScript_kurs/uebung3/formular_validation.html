@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" lang="de">
+  <title>Validierung von HTML Felder in Formularen</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <style>
+    .valide {
+			color: lightgreen;
+      border: red;
+		}
+    /* Meine Variante */
+    input[type="submit"] {
+      display: none;
+    }
+
+	</style>
+</head>
+
+<body>
+  <form name="Fomular">
+    <div class="form-group row">
+      <div class="col-sm-10 m-2">
+        <h1>TEST</h1>
+      </div>
+    </div>
+    <div class="form-check form-check-inline m-2">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+      <label class="form-check-label" for="inlineRadio1">Weiblich</label>
+    </div>
+    <div class="form-check form-check-inline m-2">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+      <label class="form-check-label" for="inlineRadio2">Männlich</label>
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-10 m-2">
+        <label for="firstname">Vorname</label>
+        <input type="text" class="form-control" id="firstname" placeholder="Vorname">
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-10 m-2">
+        <label for="name">Nachname</label>
+        <input type="text" class="form-control" id='name' placeholder="Nachname">
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-10 m-2">
+        <label for="email">E-Mail-Adresse</label>
+        <input type="email" class="form-control" id='email' placeholder="support@lohn.at">
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-10 m-2">
+        <label for="kb1">Passwort</label>
+        <input type="password" class="form-control kb-password" id="kb1" placeholder="passwort">
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-10 m-2">
+        <label for="kb2">Passwort wiederholen</label>
+        <input type="password" class="form-control kb-password" id="kb2" placeholder="passwort">
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-10 m-2">
+        <input type="submit" id="btn-submit" name="" value="Abschicken">
+      </div>
+    </div>
+
+    <div class="criteria" id="length">Mindestens 8 Zeichen lang</div>
+    <div class="criteria" id="letter">Enthält einen Buchstaben</div>
+    <div class="criteria" id="capital">Enhält einen Großbuchstaben</div>
+    <div class="criteria" id="number">Enthält eine Zahl</div>
+    <div class="criteria" id="special">Enthält ein Sonderzeichen</div>
+  </form>
+  <script src='js/vendor/jquery.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+  <script>
+    $('#btn-submit').click(function() {
+      var firstname = $('#firstname');
+      var surname = $('#name');
+      var email = $('#email');
+      var passwort1 = $('#kb1');
+      var passwort2 = $('#kb2');
+
+      if (firstname.val() == "") {
+        firstname.css('border', '2px solid red');
+      } else {
+        firstname.css('border', '2px solid green');
+      }
+      if (surname.val() == "") {
+        surname.css('border', '2px solid red');
+      } else {
+        surname.css('border', '2px solid green');
+      }
+      if (email.val() == "") {
+        email.css('border', '2px solid red');
+
+      } else {
+        email.css('border', '2px solid green');
+      }
+      if (passwort1.val() == "") {
+        passwort1.css('border', '2px solid red');
+      } else {
+        passwort1.css('border', '2px solid green');
+      }
+      if (passwort2.val() == "") {
+        passwort2.css('border', '2px solid red');
+        return false;
+      } else {
+        passwort2.css('border', '2px solid green');
+      }
+    });
+
+
+    $('.kb-password').keyup(function() {
+      var input = $(this).val();
+      if (input.length >= 8) {
+        $('#length').addClass('valide');
+      } else {
+        $('#length').removeClass('valide');
+      }
+      if (input.match(/[A-z]/)) {
+        $('#letter').addClass('valide');
+      } else {
+        $('#letter').removeClass('valide');
+      }
+      if (input.match(/[A-Z]/)) {
+        $('#capital').addClass('valide');
+      } else {
+        $('#capital').removeClass('valide');
+      }
+      if (input.match(/\d/)) {
+        $('#number').addClass('valide');
+      } else {
+        $('#number').removeClass('valide');
+      }
+      if (input.match(/[!@#$%\^&*(){}[\]<>?/|\-+]/)) {
+        $('#special').addClass('valide');
+      } else {
+        $('#special').removeClass('valide');
+      }
+
+      /* meine Variante */
+      var btnsend = $('#btn-submit');
+
+      if ($('.criteria.valide').length == 5) {
+        btnsend.show();
+      } else {
+        btnsend.hide();
+      }
+
+    });
+    
+  </script>
+</body>
+
+</html>
