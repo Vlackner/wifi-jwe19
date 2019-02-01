@@ -1,5 +1,6 @@
 var modal = document.getElementById('myModal');
 var btn = document.getElementById('myModalButton');
+var btnclose = document.getElementById('close');
 var span = document.getElementsByClassName('close') [0];
 
 btn.onclick=function() {
@@ -7,6 +8,10 @@ btn.onclick=function() {
 };
 
 span.onclick=function() {
+  modal.style.display = 'none';
+};
+
+btnclose.onclick=function() {
   modal.style.display = 'none';
 };
 
