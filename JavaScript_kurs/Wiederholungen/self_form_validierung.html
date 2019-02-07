@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eigenes Formular mit JQuery</title>
+  <link rel="stylesheet" href="css/self_form_validierung.css">
+</head>
+
+<body>
+  <form class="form_fields" action="self_form_validierung.html" method="post">
+    <fieldset>
+      <legend>Ihre Persönlichen Daten</legend>
+      <div class="ratio">
+        <label for="female">Weiblich</label>
+        <input type="radio" class="gender_ratio" id="female" name="gender" value="female">
+
+        <label for="male">Männlich</label>
+        <input type="radio" class="gender_ratio" id="male" name="gender" value="male">
+
+        <!--<div class="invalidtext rations">Es muss ein Geschlecht ausgewählt werden!</div>-->
+      </div>
+
+      <div class="inputfields">
+        <label for="firstname">Vorname</label>
+        <input type="text" class="personID" id="firstname" name="firstname" value="" placeholder="Max" required>
+        <!--<div class="invalidtext personcheck">Es dürfen keine Sonderzeichen oder Nummern vorkommen!</div>-->
+      </div>
+
+      <div class="inputfields">
+        <label for="surname">Nachname</label>
+        <input type="text" class="personID" id="surname" name="surname" value="" placeholder="Mustermann" required>
+        <!--<div class="invalidtext personcheck">Es dürfen keine Sonderzeichen oder Nummern vorkommen!</div>-->
+      </div>
+
+      <div class="inputfields">
+        <label for="emailadress">Email</label>
+        <input type="email" class="emailadress" id="emailadress" name="emailadress" value="" placeholder="max.mustermann@gmx.at" required>
+        <!--<div class="invalidtext mailadress">Es muss eine E-Mail-Adresse sein!</div>-->
+      </div>
+
+      <div class="inputfields">
+        <label for="passwortID">Passwort</label>
+        <input type="password" class="kb_passwort" id="passwortID" name="Passwort" value="" placeholder="" required>
+        <!--<div class="invalidtext kb_pw">Es muss jeweils eine Zahl/Großbuchstabe/Kleinbuchstabe/Sonderzeichen beinhalten!</div> -->
+      </div>
+
+      <div class="inputfields">
+        <label for="passwortID2">Passwort wiederholen</label>
+        <input type="password" class="kb_passwort" id="passwortID2" name="Passwort" value="" placeholder="" required>
+        <!--<div class="invalidtext kb_pw1">Es muss ident zum Passwort sein!</div> -->
+      </div>
+
+      <button type="submit" class="btn-send" name="button" disabled>Senden</button>
+
+    </fieldset>
+  </form>
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/self_form_validierung.js"></script>
+</body>
+
+</html>
