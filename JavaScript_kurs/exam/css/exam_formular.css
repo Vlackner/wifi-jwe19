@@ -1,0 +1,13 @@
+.invalide {
+  border: 2px solid red;
+}
+
+.valide {
+  border: 2px solid green;
+}
+
+.pw_anforderungen,
+.pw_wiederholung {
+  font-size: 15px;
+  color: grey;
+}
