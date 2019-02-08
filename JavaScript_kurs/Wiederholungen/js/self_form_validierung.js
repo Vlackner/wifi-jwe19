@@ -82,15 +82,23 @@ $('.kb_passwort').keyup(function(){
       var repeatPW   = $('#passwortID2').val();
 
     if (originalPW === repeatPW && originalPW != "" ) {
-        $('.kb-passwort').addClass('valide');
-        $('.kb-passwort').removeClass('invalide');
+      setValide($('.kb-passwort'))
     } else {
-      $('.kb-passwort').removeClass('valide');
-      $('.kb-passwort').addClass('invalide');
+      setInvalide($('.kb-passwort'));
     }
     checkvalide()
   });
 
+
+function setValide(selector) {
+    selector.addClass('valide');
+    selector.removeClass('invalide');
+  }
+
+  function setInvalide(selector) {
+    selector.addClass('invalide');
+    selector.removeClass('valide');
+  }
 
 // Funktion, die den Button aktiviert, wenn alles valide ist
 

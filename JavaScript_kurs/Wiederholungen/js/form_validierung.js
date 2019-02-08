@@ -272,6 +272,17 @@
    countValide()
  });
 
+function setValide(selector) {
+  selector.addClass('valide');
+  selector.removeClass('invalide');
+}
+
+function setInvalide(selector) {
+  selector.addClass('invalide');
+  selector.removeClass('valide');
+}
+
+
 
  // Function mit der Überprüft wird, ob nun alle notwendigen Felder mit
  // der Classe "valide" gefüllt sind, nur dann wird der Button sichtbar
